@@ -231,9 +231,16 @@ section.icons-section {
   border: 1px solid #ff900e;
   padding: 30px;
   border-radius: 10px;
+  cursor: pointer;
+  overflow-y: hidden;
 }
 .icon img {
   height: 50px;
+  transform: translateY(-100px);
+  transition: 0.4s ease-in-out;
+}
+.icon:hover img {
+  transform: translateY(-10px);
 }
 .icon h1 {
   font-weight: 600;
@@ -282,6 +289,69 @@ section.icons-section {
   height: 100%;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.sponsors-section .sponsors .sponsor-img img:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+}
+
+/*===========================
+========Contact us Section===========
+=============================*/
+section.contact-us {
+  position: relative;
+  padding-bottom: 50px;
+}
+.contact-us .contact-heading {
+  padding: 50px 0;
+  text-align: center;
+}
+.contact-us h2 {
+  font-weight: 700;
+  font-size: 45px;
+  color: #131313;
+  margin-bottom: 20px;
+}
+.contact-us p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #727272;
+}
+.contact-us .contact {
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  padding: 50px 0;
+  gap: 20px;
+}
+.contact-us .contact input,
+.contact-us .contact textarea {
+  resize: none;
+  background: transparent;
+  margin: auto;
+}
+.contact input {
+  padding: 5px;
+  color: #000;
+  font-size: 20px;
+  border-bottom: 1px solid #eee;
+  width: 30%;
+}
+.contact textarea {
+  padding: 5px;
+  color: #000;
+  font-size: 20px;
+  border: 1px solid #eee;
+  width: 30%;
+  height: 100px;
+}
+.contact button {
+  width: 15%;
+  margin: auto;
+  margin-top: 20px;
 }
 
 /*===========================
@@ -374,6 +444,7 @@ Media query for Mobile
     display: grid;
     gap: 50px;
     padding: 20px 10px;
+    margin-bottom: 140px;
   }
   .architect .architect-text {
     width: 100%;
@@ -388,7 +459,9 @@ Media query for Mobile
     width: 100%;
   }
   .ex-button {
-    display: none;
+    top: 100%;
+    left: 25%;
+    font-size: 45px;
   }
   section.icons-section {
     position: relative;
@@ -432,7 +505,37 @@ Media query for Mobile
     align-items: center;
     justify-items: center;
   }
+  section.contact-us {
+    padding: 50px 10px;
+  }
+  .contact-us .contact-heading {
+    padding: 0 10px;
+    text-align: center;
+  }
+  .contact-us h2 {
+    font-size: 35px;
+  }
+  .contact-us p {
+    font-size: 15px;
+  }
+  .contact-us .contact {
+    padding: 50px 10px;
+    gap: 10px;
+  }
+  .contact input {
+    width: 90%;
+  }
+
+  .contact textarea {
+    width: 90%;
+  }
+  .contact button {
+    width: 70%;
+  }
   footer {
     margin-bottom: 0;
+  }
+  footer p {
+    font-size: 15px;
   }
 }
